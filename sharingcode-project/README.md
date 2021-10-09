@@ -4,11 +4,11 @@
 <h3 align="left">Screenshots:</h3>
 
 <a href="https://ibb.co/KVJ5q19"><img src="https://i.ibb.co/9y7pTMq/Mockup.png" alt="Mockup" border="0"></a>
-</br>
+</br></br>
 <a href="https://ibb.co/XySkx2L"><img src="https://i.ibb.co/hXD1F79/capture1.jpg" alt="capture1" border="0"></a>
-</br>
+</br></br>
 <a href="https://ibb.co/sq3r7dD"><img src="https://i.ibb.co/NKYzRdk/capture2.jpg" alt="capture2" border="0"></a>
-
+</br></br>
 
 - 💬 Ask me about **HTML, CSS, Javascript**
 
