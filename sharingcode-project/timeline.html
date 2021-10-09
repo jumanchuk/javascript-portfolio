@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous" sync></script>
+        
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="js/main.js"></script>
+
+    <title>SharingCode</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="alert alert-warning alert-dismissible" style="display:none;">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+           
+          </div>
+
+        <div id = "alert_placeholder"></div>
+        
+        <div class="row scrollind">
+            <!--Left-->
+            <div class="col-sm-2 col-md-2 col-lg-4 d-none d-sm-block slides subscrollind ">
+                <div class="d-flex justify-content-end sile-margin">
+                    <div class="p-2">
+                        <div class="d-flex align-items-end flex-column">
+                            <div class="p-2">
+                                <ul class="tw-ul d-none d-sm-block d-lg-none">
+                                    <li><a href="#"><span
+                                                class="rounded-circle fa-st-icons fa fa-code fa-ul"></span></a></li>
+                                    <li><a  href="timeline.html"><span
+                                                class="rounded-circle fa-st-icons fa fa-home fa-ul"></span></a></li>
+                                    <li><a href="#" onclick="notImplemented()"><span
+                                                class="rounded-circle fa-st-icons fa fa-envelope-o fa-ul"></span></a>
+                                    </li>
+                                    <li><a href="#" onclick="notImplemented()"><span
+                                                class="rounded-circle fa-st-icons fa fa-bell fa-ul"></span></a></li>
+                                    <li><a href="#" onclick="notImplemented()"><span
+                                                class="rounded-circle fa-st-icons fa fa-user fa-ul"></span></a></li>
+                                    <li><a id="btn-md-logout" href="#"><span
+                                                class="rounded-circle fa-st-icons fa fa-sign-out fa-ul"></span></a></li>
+                                </ul>
+                                <ul class="tw-ul d-none d-lg-block">
+                                    <li><a href="#"><span class="fa fa-code fa-ul"></span></a></li>
+                                    <li><a href="timeline.html"><span class="fa fa-home fa-ul"></span> Home</a></li>
+                                    <li><a href="#" onclick="notImplemented()"><span class="fa fa-hashtag fa-ul"></span> Popular</a></li>
+                                    <li><a href="#" onclick="notImplemented()"><span class="fa fa-envelope-o fa-ul"></span> Messages</a></li>
+                                    <li><a href="#" onclick="notImplemented()"><span class="fa fa-bell fa-ul"></span> Notifications</a></li>
+                                    <li><a href="#" onclick="notImplemented()"><span class="fa fa-user fa-ul"></span> Profile</a></li>
+                                    <li><a id="btn-logout" href="#"><span class="fa fa-sign-out fa-ul"></span>
+                                            LogOut</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Left-->
+
+            <!--Center-->
+            <div id="center" class="col-sm-10 col-md-6 col-lg-4 slides subscrollind" style="height: 100vh;">
+                <div class="container timeline">
+                    <div class="row">
+                        <!--Start Card-->
+                        <div class="col-12 card-border d-flex">
+                            <a class="mr-auto p-2 fa-tw-icons hstg" href="timeline.html">INICIO</a>
+                            <a id="fav" class="p-2 fa-tw-icons" href="#" data-toggle="tooltip" data-placement="bottom"
+                                title="Tweet Saved"><i class="fa fa-star"> 0</i></a>
+                            <a id="fwg" class="p-2 fa-tw-icons" href="#" data-toggle="tooltip" data-placement="bottom"
+                                title="Followers"><i class="fa fa-users"> 0</i></a>
+                            <a id="fws" class="p-2 fa-tw-icons" href="#" data-toggle="tooltip" data-placement="bottom"
+                                title="Followings"><i class="fa fa-sign-language"> 0</i></a>
+                        </div>
+                        <div id="crd-principal" class="col-12 card-border">
+                            <div class="container cards">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img src="img/user.png" class="rounded-circle user-img" alt="Cinque Terre">
+                                    </div>
+                                    <div class="col-10">
+                                        <!--<textarea class="boxsizing" cols="30" rows="auto"
+                                            placeholder="What are you coding?"></textarea>-->
+
+                                        <div id="crd-text" aria-autocomplete="list" type="text"
+                                            aria-labelledby="Texto del Tweet" aria-multiline="true" class="boxsizing"
+                                            contenteditable="true" role="textbox" spellcheck="true" tabindex="0"
+                                            no-focuscontainer-refocus="true" placeholder="What are you coding?"></div>
+
+                                        <div id="code-box" aria-autocomplete="list" type="text"
+                                            aria-labelledby="Texto del Tweet" aria-multiline="true"
+                                            class="boxsizing codebox" contenteditable="true" role="textbox"
+                                            spellcheck="true" tabindex="0" no-focuscontainer-refocus="true"
+                                            placeholder="Write you code Here!" hidden></div>
+
+                                        <p class="p-2" id="error" hidden></p>
+                                        <!--Submenuu-->
+                                        <div class="d-flex card-submenu">
+                                            <a class="p-2 rounded-circle fa-st-icons" href="#"><i
+                                                    class="fa fa-picture-o"></i></a>
+                                            <a class="p-2 rounded-circle fa-st-icons" href="#"
+                                                onclick="toggleCodeBox()"><i class="fa fa-code"></i></a>
+                                            <button id="tw-btn" type="button" class="ml-auto p-2 btn btn-primary btn-sm"
+                                                onclick="send()">Send CodeTweet</button>
+                                        </div>
+                                        <!--End Submenu-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Card-->
+                    </div>
+                </div>
+            </div>
+            <!--End Center-->
+
+            <!--Right-->
+            <div id="right" class="col-md-4 d-none d-md-block slides subscrollind" style="height: 100vh;">
+                <div class="col-md-10 col-lg-6 news-card d-flex flex-column">
+                    <p>Popular</p>
+                    <ul class="mr-auto p-2">
+                        <li><a href="#" class="hstg" onclick="filter(this)">#BestCode</a></li>
+                        <li><a href="#" class="hstg" onclick="filter(this)">#CoderHouse</a></li>
+                        <li><a href="#" class="hstg" onclick="filter(this)">#Jury</a></li>
+                        <li><a href="#" class="hstg" onclick="filter(this)">#Umanchuk</a></li>
+                        <li><a href="#" class="hstg" onclick="filter(this)">#JavaScript</a></li>
+                        <li><a href="#" class="hstg" onclick="filter(this)">#Camada16830</a></li>
+                        <li><a href="#" class="hstg" onclick="filter(this)">#CSS</a></li>
+                        <li><a href="#" class="hstg" onclick="filter(this)">#NewSassFeatures</a></li>
+                        <li><a href="#" class="hstg" onclick="filter(this)">#CoderDojo</a></li>
+                        <li><a href="#" class="hstg" onclick="filter(this)">#Argentina</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-10 col-lg-6 news-card d-flex flex-column">
+                    <p>Top Languages</p>
+                    <ul class="mr-auto p-2">
+                        <li>Python 29.93 %.</li>
+                        <li>Java 17.78 %.</li>
+                        <li>JavaScript 8.79 %.</li>
+                        <li>C# 6.73 %.</li>
+                        <li>C/C++ 6.45 %.</li>
+                        <li>PHP 5.76 %.</li>
+                        <li>R 3.92 %.</li>
+                        <li>Objective-C 2.26 %.</li>
+                        <li>TypeScript 2.11 %.</li>
+                        <li>Swift 1.96 %.</li>
+                    </ul>
+                </div>
+            </div>
+             <!--End Right-->
+
+        </div>
+    </div>
+
+    <nav class="d-block d-sm-none navbar-fixed navbar-dark bg-dark justify-forced">
+        <div class="d-flex justify-content-around justify-forced">
+            <a class="p-2 rounded-circle fa-st-icons" href="timeline.html"><i class="fa fa-home"></i></a>
+            <a class="p-2 rounded-circle fa-st-icons" href="#" onclick="notImplemented()"><i class="fa fa-hashtag"></i></a>
+            <a class="p-2 rounded-circle fa-st-icons" href="#" onclick="notImplemented()"><i class="fa fa-envelope-o"></i></a>
+            <a class="p-2 rounded-circle fa-st-icons" href="#" onclick="notImplemented()"><i class="fa fa-bell"></i></a>
+            <a id="btn-sm-logout" class="p-2 rounded-circle fa-st-icons" href="#"><i class="fa fa-sign-out"></i></a>
+
+        </div>
+    </nav>
+
+    <script src="js/timeline.js"></script>
+    <script src="js/logout.js"></script>
+
+</body>
+
+</html>
