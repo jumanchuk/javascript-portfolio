@@ -3,9 +3,9 @@
 
 <h3 align="left">Screenshots:</h3>
 
-<img align="center" src="https://ibb.co/XySkx2L" alt="jumanchuk" height="500" width="500" />
-<img align="center" src="https://ibb.co/sq3r7dD" alt="jumanchuk" height="500" width="500" />
-<img align="center" src="https://ibb.co/KVJ5q19" alt="jumanchuk" height="500" width="500" />
+<a href="https://ibb.co/XySkx2L"><img src="https://i.ibb.co/hXD1F79/capture1.jpg" alt="capture1" border="0"></a>
+<a href="https://ibb.co/sq3r7dD"><img src="https://i.ibb.co/NKYzRdk/capture2.jpg" alt="capture2" border="0"></a>
+<a href="https://ibb.co/KVJ5q19"><img src="https://i.ibb.co/9y7pTMq/Mockup.png" alt="Mockup" border="0"></a>
 
 
 - 💬 Ask me about **HTML, CSS, Javascript**
